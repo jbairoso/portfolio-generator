@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const { writeFile, copyFile } = require("./utils/generate-site.js");
 const generatePage = require("./src/page-template");
 
+const profileDataArgs = process.argv.slice(2);
+
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -153,3 +155,8 @@ promptUser()
   .catch((err) => {
     console.log(err);
   });
+=======
+printProfileData(profileDataArgs);
+=======
+
+console.log('Hello Node!');
